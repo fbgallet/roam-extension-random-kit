@@ -1,6 +1,6 @@
 # Random Kit
 
-Insert easily random blocks (targeting a page, a block or a time period) in your workflow!
+Insert easily random blocks (targeting a page, a block or a time period) in your workflows!
 
 ⚠️ __This extension only works with **'Random Kit' SmartBlock**: you need to install the RoamJS Smartblock extension (currently [available here](https://roamjs.com/extensions/smartblocks)) then install 'Random Kit' from the SmartBlock Store (open command palette with Ctrl-Cmd + P, then search for "SmartBlocks Store")__
 
@@ -8,10 +8,29 @@ Insert easily random blocks (targeting a page, a block or a time period) in your
 
 
 ## Main feature
-Insert a **choosen number of random blocks** (**from a given page, or mentioning a page, or children of a block mentioning a page, or all 3 at once**) by running a command in native Roam command palette (Ctrl-Cmd + P) or triggering a SmartBlock inline or in a template, with a button (see below to learn how to configure them).
+Insert a **choosen number of random blocks** (**from a given page, or mentioning a page, or children of a block mentioning a page, or all 3 at once**) and
 You will be asked to set the target page/tag and the number of blocks that you want to insert (as block references).
 Then, a **button allows you to reload another block** if the chance did not make things well.
 
+
+## How to run Random Kit ?
+You can run it without any SmartBlock experience: just focus in a block, **open the native Roam command palette (Ctrl-Cmd + P) and search for "Random Kit"**. Press Enter. A dropdown menu allows you to choose among all the available features. You will then be asked to specify the page that will generally be used to target a set of blocks, and then the number of random blocks you wish to insert.
+Each SmartBlock can of course be triggered inline (pressing `jj` by default). 
+The interest of SmartBlocks is that the whole process can be automated with your preferred settings, in each of your workflows (your roam/templates or your SmartBlocks)
+There is two options:
+- You can insert a button with variables in your workklow:
+The main syntax for a button is `{{Title you choose:SmartBlock:Name of the SmartBlock:variable1=value,variable2=value}}`
+Variables are optional. The main variables are: 
+    `pageName=page name` (page name with or without brackets)
+    `repeat=x` (x is the number of block that you want to insert)
+    `button=on` or `button=off` (if you want or not display the button to reload a random block)
+Example of a button running block mention Smartblock, which mentions [[quote]] page, 3 times, without button:
+`{{My random button:SmartBlock:Random block mention:pageName=quote,repeat=3,button=no}}`
+
+- You can insert an automated SmartBlock command (so the choosen SmartBlock will be run automatically) (fore more experienced users)
+Earch SmartBlock can be run from another SmartBlock (but not roam/templates) with `<%SMARTBLOCK:name of the Smartbloc%>` command. Variables, if needed, have to be set before the <%SMARTBLOCK%> command.
+Same example as above: 
+`<%SET:pageName,quote%><%SET:repeat,3%><%SET:button=no%><%SMARTBLOCK:Random block mention%>`
 
 ## Available Smartblocks:
 
@@ -46,5 +65,6 @@ Smartblock command (to insert in your own smartBlocks and can be found in the au
 2. maximum limit of the range (100 by default)
 Example: `<%RANDOMNUMBER:50,200%>`
    
-   
-## How to insert theses SmartBlocks in your templates or your own SmartBlocks ?
+---
+If you find my work useful and want to encourage me to continue and improve the existing extensions or produce new ones, you can buy me a coffee ☕ [https://buymeacoffee.com/fbgallet](https://buymeacoffee.com/fbgallet) and follow me on Twitter: [@fbgallet](https://twitter.com/fbgallet).
+Thanks in advance for your support! 🙏
