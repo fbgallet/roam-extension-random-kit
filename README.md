@@ -4,8 +4,7 @@ Insert easily random blocks (targeting a page, a block or a time period) in your
 
 ⚠️ __This extension only works with **'Random Kit' SmartBlock**: you need to install the RoamJS Smartblock extension (currently [available here](https://roamjs.com/extensions/smartblocks)) then install 'Random Kit' from the SmartBlock Store (open command palette with Ctrl-Cmd + P, then search for "SmartBlocks Store")__
 
-![random kit](https://user-images.githubusercontent.com/74436347/180059782-e56188da-1bd0-4354-9541-411a67972ecb.gif)
-
+![random kit 2](https://user-images.githubusercontent.com/74436347/180090604-1cd3a25c-bc6d-408b-bf8c-0892a2afa9d7.gif)
 
 ## Main feature
 Insert a **choosen number of random blocks** (**from a given page, or mentioning a page, or children of a block mentioning a page, or all 3 at once**) and
