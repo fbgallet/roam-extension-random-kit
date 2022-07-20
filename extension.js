@@ -12,6 +12,19 @@ export default {
             );
             console.log("command loaded after Sb!");
         }
+        
+        window.roamAlphaAPI.ui.commandPalette.addCommand({
+            label: "Random Kit",
+            callback: () => {
+                const tUid = window.roamAlphaAPI.ui.getFocusedBlock()?.["block-uid"];
+                window.roamjs.extension.smartblocks.triggerSmartblock({
+                    srcName: 'Random Kit',
+                    targetUid: tUid,
+                    variables: { }
+                });
+            }
+        });
+        
         console.log("Random Block extension loaded.");
     },
     onunload: () => {
