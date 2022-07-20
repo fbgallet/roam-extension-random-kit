@@ -14,6 +14,7 @@ Then, a **button allows you to reload another block** if the chance did not make
 
 ## How to run Random Kit ?
 You can run it without any SmartBlock experience: just focus in a block, **open the native Roam command palette (Ctrl-Cmd + P) and search for "Random Kit"**. Press Enter. A dropdown menu allows you to choose among all the available features. You will then be asked to specify the page that will generally be used to target a set of blocks, and then the number of random blocks you wish to insert.
+
 Each SmartBlock can of course be triggered inline (pressing `jj` by default). 
 The interest of SmartBlocks is that the whole process can be automated with your preferred settings, in each of your workflows (your roam/templates or your SmartBlocks)
 There is two options:
